@@ -27,51 +27,39 @@ $userBar = $this->userBar();
         <script src="//use.typekit.net/tgy5tlj.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <!-- end UVA Font Script -->
-        <!-- <style>
+        <style>
             <?php if ($accentColor = $this->themeSetting('accent_color')): ?>
-            a:link,
-            a:visited {
-                color: <?php echo $accentColor; ?>
-            }
-            
-            a:active,
-            a:hover {
-                color: <?php echo $accentColor; ?>;
-            }
+            #content h1, #content h2, #content h3, #content h4 { color: <?php echo $accentColor; ?> }
             <?php endif; ?>
-        </style> -->
+        </style>
     </head>
 
     <?php echo $this->htmlElement('body'); ?>
         <?php echo $userBar; ?>
         <header role="banner">
-           
-           
             <div id="site-title">
-            <h1>
-                <a href="<?php echo $site->url(); ?>" class="site-title">
-                    <?php echo $escape($siteTitle); ?>
-                </a>
-            </h1>
-            <h2>
-            <?php if ($tagline = $this->themeSetting('tagline')): ?>
-                <?php echo $tagline; ?>
-                <?php endif; ?>
-            </h2>
+                <h1>
+                    <a href="<?php echo $site->url(); ?>" class="site-title">
+                        <?php echo $escape($siteTitle); ?>
+                    </a>
+                </h1>
+                <h2>
+                    <?php if ($tagline = $this->themeSetting('tagline')): ?>
+                    <?php echo $tagline; ?>
+                    <?php endif; ?>
+                </h2>
             </div>
             <nav>
-            <?php
-            echo $site->publicNav()->menu()->renderMenu(null, [
-                'maxDepth' => $this->themeSetting('nav_depth') - 1
-            ]);
-            ?>
+                <?php
+                echo $site->publicNav()->menu()->renderMenu(null, [
+                    'maxDepth' => $this->themeSetting('nav_depth') - 1
+                ]);
+                ?>
             </nav>
         </header>
-
             <div id="content" role="main">
                 <?php echo $this->content; ?>
             </div>
-
             <footer class="site-footer">
             <?php if ($this->themeSetting('logo')): ?>
                 <div id="site-logo">

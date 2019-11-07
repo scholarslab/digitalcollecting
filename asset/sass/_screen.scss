@@ -41,11 +41,12 @@ body {
     @include container;
 }
 
-#content h2:first-of-type {
+#content > h2:first-child,
+.blocks > h2:first-child  {
     @include flexbox();
     @include justify-content(flex-start);
     font-size: 3 * $base-font-size;
-    color: $dk-blue;
+    // color: $dk-blue;
     font-weight: $font-weight-demi;
 }
 
@@ -750,7 +751,7 @@ form input[type="submit"] {
 /* @group ----- Show ----- */
 
 body.resource #content > h2:first-of-type + h3 {
-    font-size: .85 * $base-font-size;
+    font-size: 1.2 * $base-font-size;
     text-transform: uppercase;
     margin: -$spacing-l 0 $spacing-l;
 }
