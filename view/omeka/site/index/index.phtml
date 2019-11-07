@@ -1,0 +1,26 @@
+<?php
+$translate = $this->plugin('translate');
+// $bg = $this->themeSettingAssetUrl('background_image');
+
+?>
+    <!-- <style>
+        <?php if ($bg): ?>
+          div#site-intro {
+            background: url(<?php echo $this->escapeHtml($bg); ?>);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center left;
+          }
+        <?php endif; ?>
+    </style> -->
+
+            <!-- <?php if (isset($bg)): ?>
+            <div id="site-intro"></div>
+            <?php endif; ?> -->
+
+
+<div class="home-content">
+<?php if ($indexContent = $this->themeSetting('index_content')): ?>
+                <?php echo $indexContent; ?>
+                <?php endif; ?>
+</div>

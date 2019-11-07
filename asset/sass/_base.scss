@@ -1,0 +1,189 @@
+// Colors
+$black                          : #000000;
+$white                          : #FFFFFF;
+$light-grey                     : #F1F1F1;
+$medium-grey                    : #DADADA;
+$text-grey                      : #595959; /*ADA compliant*/
+$text-dk-grey                   : #474747; /*ADA compliant for hover over shaded table rows*/
+$text-almost-black              : #212121; /*ADA compliant*/
+
+$dk-blue                        : #232D4B;
+$main-blue                      : #002359;
+$secondary-blue                 : #002f6c;
+
+
+$primary-text-color             : $text-grey;
+$secondary-text-color           : #232d4b;
+$white-text-color               : #fff;
+
+$background-color-primary-nav   : #002f6c;
+$background-color-secondary     : #00224d;
+$background-color-white         : #fff;
+$background-color-sidebar       : #f5f5f5;
+
+$base-color                     : $secondary-text-color;
+$base-color-light               : lighten($base-color, 10%);
+$base-color-lighter             : lighten($base-color, 20%);
+$base-color-lightest            : lighten($base-color, 30%);
+$base-color-dark                : darken($base-color, 10%);
+$base-color-darker              : darken($base-color, 20%);
+$base-color-darkest             : darken($base-color, 30%);
+
+$link-color                     : #494949; //  darken($primary-text-color, 20%)
+$link-visited-color             : $link-color;
+$link-hover-color               : darken($link-color, 30%);
+$link-focus-color               : $link-hover-color;
+$link-active-color              : darken($link-color, 30%);
+
+$link                           : #0000FF;
+
+// Typography
+
+$base-font-size: 18px; //16px
+$base-line-height: 28px; //24px
+
+$font-family-main: 'franklin-gothic-urw',arial,sans-serif;
+$font-secondary: 'franklingothic-demi', sans-serif;
+$font-family-condensed: 'franklin-gothic-urw-cond',arial narrow,sans-serif;
+$font-family-compressed: 'franklin-gothic-urw-comp',arial narrow,sans-serif;
+$font-family-title: $font-family-main;
+$default-font: $font-family-main;
+
+//Spacing
+
+$spacing-unit: $base-line-height;
+$spacing-s: .25 * $base-line-height;
+$spacing-m: .5 * $base-line-height;
+$spacing-l: $base-line-height;
+
+// UVA Font Styling
+
+$font-weight-main: 400;
+$font-weight-medium: 500;
+$font-weight-demi: 700;
+$font-weight-heavy: 900; 
+
+/* Main sizing unit */
+$uvalib-main-font-size-unit: 16px;
+
+/* spacing unit of measure */
+$uvalib-spacing-unit: 1em;
+
+// UVA Colors 
+
+/* Brand Color Palate*/
+$uvalib-main-rotunda-orange: #E57200;
+$uvalib-main-jefferson-blue: #232D4B;
+$uvalib-main-white: #FFFFFF;
+$uvalib-main-black: #000000;
+
+/*Secondary Brand Colors*/
+$uvalib-secondary-web-orange: #EB5F0C;
+$uvalib-secondary-web-blue: #141E3C;
+$uvalib-secondary-light-gray: #F1F1F1;
+$uvalib-secondary-medium-gray: #DADADA;
+$uvalib-text-grey: #595959; /*ADA compliant*/
+$uvalib-text-dk-grey: #474747; /*ADA compliant for hover over shaded table rows*/
+$uvalib-text-almost-black: #212121; /*ADA compliant*/
+$uvalib-secondary-emergency-red: #E00000; /*ADA compliant*/
+$uvalib-secondary-cyan: #009FDF;
+$uvalib-secondary-yellow: #FDDA24;
+$uvalib-secondary-teal: #25CAD3;
+$uvalib-secondary-magenta: #EF3F6B;
+$uvalib-secondary-green: #008000; /*ADA compliant*/
+
+ /* link colors for body links */
+ $uvalib-link-color: #0000FF;
+ $uvalib-link-color-visited: #660099;
+
+ /* Other color palette */
+ $uvalib-blue-50: #B3D4FF;
+ $uvalib-blue-100: #67A9FF;
+ $uvalib-blue-200: #2F8AFF;
+ $uvalib-blue-300: #0065E6;
+ $uvalib-blue-400: #0057C8;
+ $uvalib-blue-500: #004AA9;
+ $uvalib-blue-600: #003D8A;
+ $uvalib-blue-700: #002F6C;
+ $uvalib-blue-800: #00224D;
+ $uvalib-blue-900: #00142F;
+ $uvalib-blue-a100: #82B1FF;
+ $uvalib-blue-a200: #448AFF;
+ $uvalib-blue-a400: #2979FF;
+ $uvalib-blue-a700: #2962FF;
+
+ $uvalib-orange-50: #FFF4EA;
+ $uvalib-orange-100: #FFE8D2;
+ $uvalib-orange-200: #FFD3A8;
+ $uvalib-orange-300: #FFB060;
+ $uvalib-orange-400: #FFA042;
+ $uvalib-orange-500: #FF9123;
+ $uvalib-orange-600: #FF8204;
+ $uvalib-orange-700: #E57200; //$uvalib-main-rotunda-orange
+ $uvalib-orange-800: #C66300;
+ $uvalib-orange-900: #A85400;
+ $uvalib-orange-a100: #FFD180;
+ $uvalib-orange-a200: #FFAB40;
+ $uvalib-orange-a400: #FF9100;
+ $uvalib-orange-a700: #FF6D00;
+
+ $uvalib-grey-50: #FAFAFA;
+ $uvalib-grey-100: #F5F5F5;
+ $uvalib-grey-200: #EEEEEE;
+ $uvalib-grey-300: #E0E0E0;
+ $uvalib-grey-400: #BDBDBD;
+ $uvalib-grey-500: #9E9E9E;
+ $uvalib-grey-600: #757575;
+ $uvalib-grey-700: #616161;
+ $uvalib-grey-800: #424242;
+ $uvalib-grey-900: #212121;
+
+ $uvalib-black-alpha-12: rgba(0, 0, 0, 0.12);
+ $uvalib-black-alpha-38: rgba(0, 0, 0, 0.38);
+ $uvalib-black-alpha-54: rgba(0, 0, 0, 0.54);
+ $uvalib-black-alpha-87: rgba(0, 0, 0, 0.87);
+ $uvalib-white-alpha-12: rgba(255, 255, 255, 0.12);
+ $uvalib-white-alpha-30: rgba(255, 255, 255, 0.30);
+ $uvalib-white-alpha-70: rgba(255, 255, 255, 0.70);
+
+ $uvalib-black: #000;
+ $uvalib-white: #FFF;
+ $uvalib-danger: #B30000; /*old not ADA compliant #C15943;*/
+ $uvalib-success: #00D66E;
+
+ /* color variables */
+ $color-primary-color: $uvalib-blue-700;
+ $color-primary-color-dark: $uvalib-blue-800;
+ $color-primary-color-light: $uvalib-blue-500;
+
+ $accent-color: $uvalib-orange-a200; /* paper components reference this */
+ $color-accent-color: $uvalib-orange-a200;
+ $color-accent-color-dark: $uvalib-orange-a400;
+ $color-accent-color-light: $uvalib-orange-a100;
+
+ $color-text-blue: $uvalib-blue-a400;
+ $color-text-gray: $uvalib-grey-700;
+ $color-text-dark: $uvalib-text-grey;
+ $color-text-dark-secondary: $uvalib-text-grey;
+ $color-text-disabled: $uvalib-black-alpha-38;
+ $color-text-light: $uvalib-white;
+//  $color-text-light-secondary: $white-alpha-70;
+
+ $color-primary-orange: $uvalib-orange-700;
+ $color-primary-blue: $uvalib-blue-700;
+ $color-white: $uvalib-white;
+ $color-secondary-orange: #eb5f0c;
+ $color-secondary-blue: #002359;
+ $color-medium-blue: #344D9E;
+ $color-light-blue: #9FB2CE;
+ $color-light-gray: $uvalib-grey-100;
+ $color-medium-gray: $uvalib-grey-400;
+ $color-emergency-red: $uvalib-danger;
+
+ $color-accessibility-outline: cyan;
+ $color-accessibility-outline-light-bg: $uvalib-grey-700;
+ $color-accessibility-outline-dark-bg: $uvalib-grey-400;
+
+ $uvalib-captions-bg: $uvalib-grey-200;
+ $uvalib-sidebar-bg: $uvalib-white;
+

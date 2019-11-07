@@ -1,0 +1,33 @@
+{
+  "name": "digitalcollecting",
+  "version": "1.0.0",
+  "description": "A theme for Omeka S.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omeka-s-themes/default.git"
+  },
+  "keywords": [
+    "omeka-s",
+    "theme"
+  ],
+  "author": "UVA Library Scholars' Lab",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/omeka-s-themes/default/issues"
+  },
+  "homepage": "https://github.com/omeka-s-themes/default#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.2.1",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "browserslist": [
+    "> 5%",
+    "> 1% in US"
+  ]
+}

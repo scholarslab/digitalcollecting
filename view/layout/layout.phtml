@@ -1,0 +1,86 @@
+<?php
+$escape = $this->plugin('escapeHtml');
+$siteTitle = $site->title();
+$this->htmlElement('html')->setAttribute('lang', $this->lang());
+$this->headMeta()->setCharset('utf-8');
+$this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
+$this->headTitle($siteTitle)->setSeparator(' · ');
+$this->headTitle($this->setting('installation_title', 'Omeka S'))->setSeparator(' · ');
+$this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
+$this->headLink()->appendStylesheet($this->assetUrl('css/style.css'));
+$this->headScript()->prependFile($this->assetUrl('js/default.js'));
+$this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
+$this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
+$this->trigger('view.layout');
+$userBar = $this->userBar();
+?>
+<?php echo $this->doctype(); ?>
+<?php echo $this->htmlElement('html'); ?>
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headStyle(); ?>
+        <?php echo $this->headScript(); ?>
+        <link rel="shortcut icon" sizes="32x32" href="https://www.library.virginia.edu/images/icon-32.png">
+        <!-- UVA Font Script -->
+        <script src="//use.typekit.net/tgy5tlj.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <!-- end UVA Font Script -->
+        <!-- <style>
+            <?php if ($accentColor = $this->themeSetting('accent_color')): ?>
+            a:link,
+            a:visited {
+                color: <?php echo $accentColor; ?>
+            }
+            
+            a:active,
+            a:hover {
+                color: <?php echo $accentColor; ?>;
+            }
+            <?php endif; ?>
+        </style> -->
+    </head>
+
+    <?php echo $this->htmlElement('body'); ?>
+        <?php echo $userBar; ?>
+        <header role="banner">
+           
+           
+            <div id="site-title">
+            <h1>
+                <a href="<?php echo $site->url(); ?>" class="site-title">
+                    <?php echo $escape($siteTitle); ?>
+                </a>
+            </h1>
+            <h2>
+            <?php if ($tagline = $this->themeSetting('tagline')): ?>
+                <?php echo $tagline; ?>
+                <?php endif; ?>
+            </h2>
+            </div>
+            <nav>
+            <?php
+            echo $site->publicNav()->menu()->renderMenu(null, [
+                'maxDepth' => $this->themeSetting('nav_depth') - 1
+            ]);
+            ?>
+            </nav>
+        </header>
+
+            <div id="content" role="main">
+                <?php echo $this->content; ?>
+            </div>
+
+            <footer class="site-footer">
+            <?php if ($this->themeSetting('logo')): ?>
+                <div id="site-logo">
+                <a href="<?php echo $site->url(); ?>" class="site-logo"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
+                </div>
+            <?php endif; ?>
+                    <?php if ($footerContent = $this->themeSetting('footer')): ?>
+                <?php echo $footerContent; ?>
+                <?php endif; ?>
+            </footer>
+    </body>
+</html>
