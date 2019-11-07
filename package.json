@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omeka-s-themes/default.git"
+    "url": "git+https://github.com/scholarslab/digitalcollecting"
   },
   "keywords": [
     "omeka-s",
@@ -17,9 +17,9 @@
   "author": "UVA Library Scholars' Lab",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/omeka-s-themes/default/issues"
+    "url": "https://github.com/scholarslab/digitalcollecting/issues"
   },
-  "homepage": "https://github.com/omeka-s-themes/default#readme",
+  "homepage": "https://github.com/scholarslab/digitalcollecting#readme",
   "devDependencies": {
     "autoprefixer": "^9.2.1",
     "gulp": "^4.0.0",
