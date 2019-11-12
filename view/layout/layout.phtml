@@ -35,6 +35,7 @@ $userBar = $this->userBar();
     </head>
 
     <?php echo $this->htmlElement('body'); ?>
+        <a href="#content" id="skipnav">Skip to main content</a>
         <?php echo $userBar; ?>
         <header role="banner">
             <div id="site-title">
@@ -60,15 +61,15 @@ $userBar = $this->userBar();
             <div id="content" role="main">
                 <?php echo $this->content; ?>
             </div>
-            <footer class="site-footer">
+        <footer class="site-footer">
             <?php if ($this->themeSetting('logo')): ?>
                 <div id="site-logo">
-                <a href="<?php echo $site->url(); ?>" class="site-logo"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
+                <a href="<?php echo $site->url(); ?>" class="site-logo"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo" alt="<?php echo $this->themeSetting('logo_alt'); ?>"></a>
                 </div>
             <?php endif; ?>
                     <?php if ($footerContent = $this->themeSetting('footer')): ?>
                 <?php echo $footerContent; ?>
-                <?php endif; ?>
-            </footer>
+            <?php endif; ?>
+        </footer>
     </body>
 </html>
